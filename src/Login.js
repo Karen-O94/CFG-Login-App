@@ -7,7 +7,7 @@ function Login(){
 
     <form class="form login-form">
       <div class="form-group">
-        <label for="email-login">Email: </label>
+        <label for="email-login">Username: </label>
         <br />
         <input class="form-input" type="text" id="email-login" />
       </div>
