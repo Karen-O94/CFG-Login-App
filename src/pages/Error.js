@@ -1,8 +1,8 @@
-function Logout() {
+function Error() {
     return (
       <div class="row justify-content-center">
         <div class="col-md-6 p-3">
-          <h2 class="titles">Login Success!</h2>
+          <h2 class="titles">Login Error</h2>
             <div>
                   <h1>Login Unsuccessful! Please try again</h1>
             </div>
@@ -17,3 +17,5 @@ function Logout() {
       </div>
     );
   }
+
+  export default Error;
