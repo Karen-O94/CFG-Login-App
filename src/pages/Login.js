@@ -1,16 +1,35 @@
 import React, {useState} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'
+//import LoginSuccess from './LoginSuccess';
 
 function Login(){
   //storing login values as states
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  // const [userIsLoggedin, setUserIsLoggedin] = useState(false);
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     console.log(username, password);
-  }
+    // const userInfo = {
+    //   username,
+    //   password,
+    // };
+    // localStorage.setItem('token-info', JSON.stringify(userInfo));
+    // setUserIsLoggedin(true);
+    // setUsername('');
+    // setPassword('');
+  };
+
+  // const handleLogoutSubmit = (e) => {
+  //   e.preventDefault();
+  //   localStorage.removeItem('token-info');
+  //   setUserIsLoggedin(false);
+  // };
+
     return (
 <div className="row justify-content-center">
+
   <div className="col-md-6 p-3">
     <h2 className="titles">LOGIN</h2>
 
@@ -28,7 +47,7 @@ function Login(){
       </div>
 
       <div class="form-group mb-3">
-        <button className="btn btn-lg login-btn" type="submit">Login</button>
+        <button className="btn btn-lg btn-danger login-btn" type="submit">Login</button>
       </div>
     </form>
   </div>
@@ -37,3 +56,22 @@ function Login(){
 }
 
 export default Login;
+
+// const handleLoginSubmit = (e) => {
+//   e.preventDefault();
+//   console.log(username, password);
+//   const userInfo = {
+//     username,
+//     password,
+//   };
+//   localStorage.setItem('token-info', JSON.stringify(userInfo));
+//   setUserIsLoggedin(true);
+//   setUsername('');
+//   setPassword('');
+// };
+
+// const handleLogoutSubmit = (e) => {
+//   e.preventDefault();
+//   localStorage.removeItem('token-info');
+//   setUserIsLoggedin(false);
+// };

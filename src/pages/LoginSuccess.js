@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 function LoginSuccess() {
   return (
     <div className="row justify-content-center">
@@ -8,8 +9,8 @@ function LoginSuccess() {
         </div>
 
         <div className="form-group mb-3">
-          Click here to sign out
-          <button className="btn btn-lg login-btn" type="submit">
+          <h5>Click here to sign out</h5>
+          <button className="btn btn-lg btn-danger logout-btn" type="submit">
             LogOut
           </button>
         </div>

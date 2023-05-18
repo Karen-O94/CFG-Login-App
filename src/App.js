@@ -11,12 +11,11 @@ function App() {
       <header className="App-header">
         <Router>
           <Routes>
-            <Route exact path="/" component={Login}/>
-            <Route exact path="/success" component={LoginSuccess}/>
-            <Route exact path="/error" component={Error}/>
+            <Route exact path="/" element={<Login />}/>
+            <Route exact path="/success" element={<LoginSuccess />}/>
+            <Route exact path="/error" element={<Error />}/>
           </Routes>
         </Router>
-        <Login />
       </header>
     </div>
   );
