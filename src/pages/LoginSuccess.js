@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useEffect, useState } from 'react';
+import { Navigate } from 'react-router-dom';
 
 //LoginSuccess route to be displayed when user is logged in
 function LoginSuccess() {
@@ -13,8 +14,7 @@ function LoginSuccess() {
 
   //If user is not logged in, they will need to be redirected to Login (Home page)
   if (!validated) {
-    
-
+    return <Navigate replace to="/"/>
   } else {
     return (
       <div className="row justify-content-center">
