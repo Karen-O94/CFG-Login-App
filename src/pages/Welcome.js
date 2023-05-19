@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 
 //LoginSuccess route to be displayed when user is logged in
-function LoginSuccess() {
-  const [validated, setValidation] = useState(null)
+function Welcome() {
+  const [validated, setValidated] = useState(null)
   useEffect (() => {
     const userIsLoggedIn = localStorage.getItem("validated");
     if (userIsLoggedIn) {
-      setValidated(userIsLoggedIn)
+      setValidated(userIsLoggedIn);
     }
   }, []);
 
@@ -36,4 +36,4 @@ function LoginSuccess() {
   }
 };
 
-export default LoginSuccess;
+export default Welcome;

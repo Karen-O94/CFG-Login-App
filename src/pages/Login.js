@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'
-//import LoginSuccess from './LoginSuccess';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import { useNavigate } from "react-router-dom";
+//import Welcome from './pages/Welcome';
 
 function Login(){
   //storing login values as states
@@ -9,28 +10,21 @@ function Login(){
   const [validated, setValidated] = useState(
     localStorage.getItem(localStorage.getItem("validated")|| false));
   const clients = [{username:"jamie", password: "hello123"}];
+  //const navigate = useNavigate()
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    console.log(username, password);
-
+    //console.log(username, password);
     //Finds if client within clients object has a matching username
     const userInfo = clients.find((client) => client.username === username);
-
     // Checks to see if password from client matches with corresponding password in clients 
     //If checks are true, it stores information in locale storage
     if (userInfo && userInfo.password === password) {
       setValidated(true)
       localStorage.setItem("validated", true);
+      //navigate("/welcome");
     }
   };
-
-  // const handleLogoutSubmit = (e) => {
-  //   e.preventDefault();
-  //   localStorage.removeItem('token-info');
-  //   setUserIsLoggedin(false);
-  // };
-
     return (
 <div className="row justify-content-center">
 
@@ -56,7 +50,7 @@ function Login(){
     </form>
   </div>
 </div>
-    )
+    );
 }
 
 export default Login;
