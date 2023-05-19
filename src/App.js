@@ -11,9 +11,9 @@ function App() {
       <header className="App-header">
         <Router>
           <Routes>
-            <Route exact path="/" element={<Login />}/>
-            <Route exact path="/success" element={<LoginSuccess />}/>
-            <Route exact path="/error" element={<Error />}/>
+            <Route index element={<Login />}/>
+            <Route exact path="success" element={<LoginSuccess />}/>
+            <Route exact path="error" element={<Error />}/>
           </Routes>
         </Router>
       </header>
