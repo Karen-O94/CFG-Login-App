@@ -6,19 +6,23 @@ function Login(){
   //storing login values as states
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  // const [userIsLoggedin, setUserIsLoggedin] = useState(false);
+  const [validated, setValidated] = useState(
+    localStorage.getItem(localStorage.getItem("validated")|| false));
+  const clients = [{username:"jamie", password: "hello123"}];
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     console.log(username, password);
-    // const userInfo = {
-    //   username,
-    //   password,
-    // };
-    // localStorage.setItem('token-info', JSON.stringify(userInfo));
-    // setUserIsLoggedin(true);
-    // setUsername('');
-    // setPassword('');
+
+    //Finds if client within clients object has a matching username
+    const userInfo = clients.find((client) => client.username === username);
+
+    // Checks to see if password from client matches with corresponding password in clients 
+    //If checks are true, it stores information in locale storage
+    if (userInfo && userInfo.password === password) {
+      setValidated(true)
+      localStorage.setItem("validated", true);
+    }
   };
 
   // const handleLogoutSubmit = (e) => {
@@ -56,22 +60,3 @@ function Login(){
 }
 
 export default Login;
-
-// const handleLoginSubmit = (e) => {
-//   e.preventDefault();
-//   console.log(username, password);
-//   const userInfo = {
-//     username,
-//     password,
-//   };
-//   localStorage.setItem('token-info', JSON.stringify(userInfo));
-//   setUserIsLoggedin(true);
-//   setUsername('');
-//   setPassword('');
-// };
-
-// const handleLogoutSubmit = (e) => {
-//   e.preventDefault();
-//   localStorage.removeItem('token-info');
-//   setUserIsLoggedin(false);
-// };
