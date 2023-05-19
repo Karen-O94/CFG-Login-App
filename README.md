@@ -2,4 +2,4 @@
 A simple login-logout web app
 
 ## Screenshot
-<img width="856" alt="image" src="https://github.com/Karen-O94/CFG-Login-App/assets/74797740/9a821afb-911c-4c9e-9384-e3929957ec2b">
+![image](https://github.com/Karen-O94/CFG-Login-App/assets/74797740/0913c589-e828-4b05-bd20-7c6b3f0b3e52)
